@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                    <i onclick="myFunction()" class='bx bx-menu '></i>
                 </div>
             </nav>
         </header>
@@ -197,5 +197,26 @@
             </div>
             <p>&#169; 2023 copyright all right reserved</p>
         </footer>
+        <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+              document.getElementById("nav-menu").classList.toggle("show");
+            }
+            
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+              if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                  }
+                }
+              }
+            }
+            </script>
     </body>
 </html>
